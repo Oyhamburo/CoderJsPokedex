@@ -1,0 +1,69 @@
+/*Fuentes*/
+@font-face {
+  font-family: pokemon;
+  src: url(../letras/ketchum.otf); }
+
+@font-face {
+  font-family: gameboy;
+  src: url(../letras/pokemon-classic.ttf); }
+
+.item1 {
+  grid-area: nombre; }
+
+.item2 {
+  grid-area: tipos; }
+
+.item3 {
+  grid-area: pokemon; }
+
+.item4 {
+  grid-area: id; }
+
+.pokedex {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  width: 1300px; }
+  .pokedex div {
+    color: black;
+    text-align: center;
+    font-family: gameboy; }
+  .pokedex__img {
+    position: absolute;
+    width: 1300px;
+    z-index: -99; }
+  .pokedex__pantalla {
+    background-size: 30px 32px;
+    background-image: linear-gradient(to right, grey 1px, transparent 1px), linear-gradient(to bottom, grey 1px, transparent 1px);
+    border-radius: 0.3rem;
+    width: 572px;
+    height: 386px;
+    margin-left: 364px;
+    display: grid;
+    grid-template-areas: 'nombre id' 'pokemon tipos' 'pokemon tipos'; }
+    .pokedex__pantalla__img {
+      height: 90%; }
+    .pokedex__pantalla .item2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+    .pokedex__pantalla .item1, .pokedex__pantalla .item4, .pokedex__pantalla .item2 {
+      padding: 1rem; }
+      .pokedex__pantalla .item1 div, .pokedex__pantalla .item4 div, .pokedex__pantalla .item2 div {
+        background-color: white;
+        padding: 0.3rem;
+        border-radius: 0.6rem;
+        border: solid 1px gray; }
+
+.input {
+  text-align: center;
+  margin-top: 8px; }
+  .input input {
+    background-color: black;
+    border-radius: 0.5rem;
+    color: green;
+    font-family: gameboy;
+    text-align: center; }
+
+.br1 {
+  height: 8.8rem; }
