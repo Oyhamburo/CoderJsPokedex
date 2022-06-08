@@ -7,6 +7,42 @@
   font-family: gameboy;
   src: url(../letras/pokemon-classic.ttf); }
 
+* {
+  margin: 0; }
+
+.main {
+  background-color: #0a141e;
+  width: 1600px;
+  height: 100vh;
+  padding: 3rem 0; }
+  .main h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-family: gameboy; }
+
+.inventory {
+  display: grid;
+  grid-template-areas: 'auto auto auto';
+  justify-content: center;
+  padding-top: 3rem;
+  gap: 4rem; }
+  .inventory__card {
+    background-color: white;
+    width: 250px;
+    height: 350px; }
+    .inventory__card__imagen {
+      height: 70%;
+      background-color: #0a141e;
+      background-size: 31px 31px;
+      background-image: linear-gradient(to right, grey 1px, transparent 1px), linear-gradient(to bottom, grey 1px, transparent 1px);
+      display: flex; }
+    .inventory__card__container {
+      background-color: #1b252f;
+      height: 30%;
+      color: white;
+      text-align: center; }
+
 .item1 {
   grid-area: nombre; }
 

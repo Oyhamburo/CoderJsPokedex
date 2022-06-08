@@ -8,7 +8,7 @@
     src: url(../letras/pokemon-classic.ttf);
 }
 
-
+@import "./inventory";
 
 .item1 { grid-area: nombre; }
 .item2 { grid-area: tipos; }
