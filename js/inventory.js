@@ -14,15 +14,18 @@ fetchPokemon(numero)
 function createCard(pokemon) {
     const name = pokemon.name;
     const url = pokemon.sprites.front_default;
+    const tipo = pokemon.types[0].type.name;
     const card = document.createElement('article')
-    card.classList.add('invetory__card')
+    card.classList.add('inventory__card')
     card.innerHTML = `
     <div class="inventory__card__imagen"><img src="${url}" alt="" class="inventory__card__img"></div>
         <div class="inventory__card__container">
             <br>
             <h2>${name}</h2>
-            <p>tipo</p>
+            <p>${tipo}</p>
     </div>
     `
     inventory.appendChild(card)
 }
+
+

@@ -47,6 +47,7 @@ function add() {
     localStorage.setItem("favorito",fav);
     const id = document.querySelector('.item4-div').textContent;
     localStorage.setItem("id",id);
+    swal("Good job!", "Tienes un nuevo Pokémon favorito", "success");
 }
 
 function clear() {
