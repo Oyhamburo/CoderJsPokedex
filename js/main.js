@@ -42,15 +42,22 @@ search_pokemonName.addEventListener("input", () => {
   });
 
 
+let inventario = [];
+
+console.log(inventario);
 function add() {
-    const fav = document.querySelector('.pokedex__pantalla__img').src;
-    localStorage.setItem("favorito",fav);
     const id = document.querySelector('.item4-div').textContent;
-    localStorage.setItem("id",id);
+    inventario.push(id);
+    console.log(inventario);
+    localStorage.setItem("favoritos",JSON.stringify(inventario))
+    //alert
     swal("Good job!", "Tienes un nuevo Pokémon favorito", "success");
+    
 }
 
 function clear() {
     localStorage.clear()
 }
+
+
 

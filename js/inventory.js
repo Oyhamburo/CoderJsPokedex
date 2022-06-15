@@ -4,28 +4,39 @@ function fetchPokemon(id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then((res) => res.json())
     .then((data) => {
-        console.log(data);
         createCard(data);
     })
 }
-let numero = parseInt(localStorage.getItem("id"))
-fetchPokemon(numero)
+
+let ujsi =localStorage.getItem("favoritos")
+let prueba = JSON.parse(ujsi);
+console.log(prueba)
+
+prueba.forEach(element => fetchPokemon(element));
+
 
 function createCard(pokemon) {
     const name = pokemon.name;
     const url = pokemon.sprites.front_default;
-    const tipo = pokemon.types[0].type.name;
     const card = document.createElement('article')
-    card.classList.add('inventory__card')
+    card.classList.add('flip-card')
     card.innerHTML = `
-    <div class="inventory__card__imagen"><img src="${url}" alt="" class="inventory__card__img"></div>
-        <div class="inventory__card__container">
-            <br>
-            <h2>${name}</h2>
-            <p>${tipo}</p>
+    <div class="flip-card-inner">
+                
+        <div class="flip-card-front">
+            <img src="${url}"  	style="width:300px;height:300px;">
+        </div>
+        
+        <div class="flip-card-back">
+            <h1>${name}</h1> 
+            <p>planta</p> 
+            <p>posion</p>
+        </div>
     </div>
     `
     inventory.appendChild(card)
 }
+
+
 
 
