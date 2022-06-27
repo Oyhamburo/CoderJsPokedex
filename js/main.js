@@ -39,20 +39,20 @@ fetchPokemon(1);
 
 search_pokemonName.addEventListener("input", () => {
     fetchPokemon(search_pokemonName.value.toLowerCase());
-  });
+});
 
 
-let inventario = [];
 
-console.log(inventario);
 function add() {
     const id = document.querySelector('.item4-div').textContent;
+    let inventario = JSON.parse(localStorage.getItem("favoritos")) || [];
+   
     inventario.push(id);
-    console.log(inventario);
     localStorage.setItem("favoritos",JSON.stringify(inventario))
+
+    
     //alert
     swal("Good job!", "Tienes un nuevo Pokémon favorito", "success");
-    
 }
 
 function clear() {

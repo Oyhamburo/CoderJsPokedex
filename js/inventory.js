@@ -8,14 +8,19 @@ function fetchPokemon(id) {
     })
 }
 
-let ujsi =localStorage.getItem("favoritos")
-let prueba = JSON.parse(ujsi);
-console.log(prueba)
+let fav =JSON.parse(localStorage.getItem("favoritos"));
+console.log(fav)
 
-prueba.forEach(element => fetchPokemon(element));
+fav.forEach(element => {
+
+    fetchPokemon(element);
+    
+});
+
 
 
 function createCard(pokemon) {
+    
     const name = pokemon.name;
     const url = pokemon.sprites.front_default;
     const card = document.createElement('article')
@@ -36,7 +41,5 @@ function createCard(pokemon) {
     `
     inventory.appendChild(card)
 }
-
-
 
 
