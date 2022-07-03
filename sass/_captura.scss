@@ -1,0 +1,102 @@
+.captura{
+    display: flex;
+    justify-content: center;
+    height: 768px;
+    background-color: black;
+    &__main {
+        margin-top: 6rem;
+        width: 1024px;
+        background-image: url("../img/campo.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: white;
+        &__section {
+            width: 1024px;
+            height: 768px;
+            display: grid;
+            grid-template-areas: 'BarEnemy ImgEnemy'
+                                'ImgTrainer ImgEnemy'
+                                'ImgTrainer BarTrainer'
+                                'footer footer'
+                                ;
+            & article{
+            }
+            &__bar{
+                background-color: white;
+                width: 20rem;
+                height: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                border: solid black 3.5px;
+                border-radius: 0.3rem;
+                &__enemy{
+                    margin-top: 4rem;
+                    margin-left: 6rem;    
+                }
+                &__trainer{
+                    margin-left: 6rem;
+                    margin-bottom: 16rem;
+                }
+                & div{font-family: gameboy;}
+            }
+            &__img{
+                width: 280px;
+                height: 280px;
+                & img{
+                    width: 280px;
+                }
+                &__enemy{
+                    margin-top: 6rem;
+                    margin-left: 6rem;
+                }
+                &__trainer{
+                    margin-left: 8rem;
+                    margin-top: 9rem;
+                }
+            }
+        }
+        &__opciones {
+            background-color: aqua;
+            position: absolute;
+            width: 1024px;
+            height: 205px;
+            margin-top: 575px;
+            z-index: 999;
+            display: flex;
+            &__pokebola{
+                border: solid black 3px;
+                width: 100%;
+            }
+            &__menu{
+                border: solid black 3px;
+                width: 100%;
+                display: grid;
+                grid-template-areas: 'auto auto';
+                & div{
+                    border: solid black 1px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    & a{
+                        width: 100%;
+                        height: 100%;
+                        text-decoration: none;
+                    }
+                    & button {
+                        height: 100%;
+                        width: 100%;
+                        font-family: gameboy;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.item10 { grid-area: BarEnemy; }
+.item20 { grid-area: ImgEnemy; }
+.item30 { grid-area: BarTrainer; }
+.item40 { grid-area: ImgTrainer; }
+.item50 { grid-area: footer; }
