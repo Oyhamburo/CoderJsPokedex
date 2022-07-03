@@ -95,12 +95,13 @@
       width: 1024px;
       height: 768px;
       display: grid;
-      grid-template-areas: 'BarEnemy ImgEnemy' 'ImgTrainer ImgEnemy' 'ImgTrainer BarTrainer' 'footer footer'; }
+      grid-template-areas: 'BarEnemy ImgEnemy' 'ImgTrainer ImgEnemy' 'ImgTrainer BarTrainer' 'footer footer'; }
       .captura__main__section__bar {
         background-color: white;
         width: 20rem;
         height: 4rem;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-around;
         border: solid black 3.5px;
@@ -112,7 +113,7 @@
           margin-left: 6rem;
           margin-bottom: 16rem; }
         .captura__main__section__bar div {
-          font-family: gameboy; }
+          display: flex; }
       .captura__main__section__img {
         width: 280px;
         height: 280px; }
@@ -169,6 +170,13 @@
 .item50 {
   grid-area: footer; }
 
+.facu {
+  position: absolute;
+  margin-bottom: 40px; }
+
+.margenBarra {
+  margin-top: 35px; }
+
 .item1 {
   grid-area: nombre; }
 
@@ -180,6 +188,9 @@
 
 .item4 {
   grid-area: id; }
+
+* {
+  font-family: gameboy; }
 
 .pokedex {
   margin-left: auto;
@@ -202,7 +213,7 @@
     height: 386px;
     margin-left: 364px;
     display: grid;
-    grid-template-areas: 'nombre id' 'pokemon tipos' 'pokemon tipos'; }
+    grid-template-areas: 'nombre id' 'pokemon tipos' 'pokemon tipos'; }
     .pokedex__pantalla__img {
       height: 90%; }
     .pokedex__pantalla .item2 {

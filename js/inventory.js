@@ -39,6 +39,7 @@ function createCard(data) {
     }
     let btnEquip = document.getElementById(`btn-equip-${data.pokemon.id}`);
     btnEquip.onclick = () => {
+        console.log(data.pokemon.id)
         equip(data.pokemon.id);
     }
 }

@@ -16,7 +16,9 @@
 .item2 { grid-area: tipos; }
 .item3 { grid-area: pokemon; }
 .item4 { grid-area: id; }
-
+*{
+    font-family: gameboy;
+}
 .pokedex{
     margin-left: auto;
     margin-right: auto;

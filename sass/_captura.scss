@@ -19,13 +19,12 @@
                                 'ImgTrainer BarTrainer'
                                 'footer footer'
                                 ;
-            & article{
-            }
             &__bar{
                 background-color: white;
                 width: 20rem;
                 height: 4rem;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: space-around;
                 border: solid black 3.5px;
@@ -38,7 +37,9 @@
                     margin-left: 6rem;
                     margin-bottom: 16rem;
                 }
-                & div{font-family: gameboy;}
+                & div{
+                    display: flex;
+                }
             }
             &__img{
                 width: 280px;
@@ -100,3 +101,12 @@
 .item30 { grid-area: BarTrainer; }
 .item40 { grid-area: ImgTrainer; }
 .item50 { grid-area: footer; }
+
+.facu{
+    position: absolute;
+    margin-bottom: 40px;
+}
+
+.margenBarra{
+    margin-top: 35px;
+}
