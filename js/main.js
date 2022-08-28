@@ -16,6 +16,7 @@ function fetchPokemon(id) {
     .then((res) => res.json())
     .then((data) => {
         createPokemon(data);
+        console.log(data);
     })
 }
 
